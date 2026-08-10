@@ -50,24 +50,36 @@ window.addEventListener("scroll", () => {
 ========================================== */
 
 const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
 
-const navLinks = document.querySelector(".nav-links");
-
-if (menuToggle) {
+if (menuToggle && navMenu) {
 
     menuToggle.addEventListener("click", () => {
 
-        navLinks.classList.toggle("active");
+        navMenu.classList.toggle("active");
+
+        menuToggle.classList.toggle("active");
 
     });
 
 }
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+
+/* ==========================================
+   CLOSE MOBILE MENU AFTER LINK CLICK
+========================================== */
+
+document.querySelectorAll(".nav-menu a").forEach(link => {
 
     link.addEventListener("click", () => {
 
-        navLinks.classList.remove("active");
+        if (navMenu) {
+            navMenu.classList.remove("active");
+        }
+
+        if (menuToggle) {
+            menuToggle.classList.remove("active");
+        }
 
     });
 

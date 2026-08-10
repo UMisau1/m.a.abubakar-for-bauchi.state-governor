@@ -2,8 +2,8 @@
    ELECTION COUNTDOWN
 ========================================== */
 
-// Saita ranar zabe (Ka canza idan an sanar da ranar hukuma)
-const electionDate = new Date("March 14, 2027 08:00:00").getTime();
+
+const electionDate = new Date("February 09, 2027 08:00:00").getTime();
 
 function updateCountdown(){
 

@@ -2199,6 +2199,23 @@ body.dark-mode textarea{
 }
 
 }
+/* =========================================================
+   GLOBAL CONTAINER
+   ONE WIDTH SYSTEM FOR THE ENTIRE WEBSITE
+========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+    box-sizing: border-box;
+}
 /* ==========================================
    RESPONSIVE.CSS
    LARGE DESKTOP & LAPTOP
@@ -4057,6 +4074,85 @@ transition:.35s;
 
         display:none;
 
+    }
+
+}
+/* =========================================================
+   GLOBAL SECTION WIDTH & SPACING
+========================================================= */
+
+section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section > .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+/* Prevent horizontal overflow */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+
+/* Cards and grids must respect parent width */
+
+.grid,
+.cards-grid,
+.future-grid,
+.governance-grid,
+.legislative-laws-grid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 100%;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
 }
