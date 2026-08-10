@@ -493,6 +493,27 @@ window.addEventListener("resize", () => {
 
 });
 
+/* ==========================================
+   MOBILE DROPDOWN MENU
+========================================== */
+
+document.querySelectorAll(".nav-menu .dropdown > a").forEach(link => {
+
+    link.addEventListener("click", function(e) {
+
+        if (window.innerWidth <= 991) {
+
+            e.preventDefault();
+
+            const dropdown = this.parentElement;
+
+            dropdown.classList.toggle("active");
+
+        }
+
+    });
+
+});
 
 /* ==========================================
    END OF MAIN.JS
